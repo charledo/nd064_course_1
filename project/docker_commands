@@ -1,11 +1,40 @@
 ## Docker commands used to build the application 
 # TODO: insert the docker build command
+sudo docker build -t techtrends .
 
 ## Docker commands used to run the application
 # TODO: insert the docker run command
+sudo docker run -d -p 7111:3111 techtrends
 
 ## Docker commands used to get the application logs
 # TODO: insert the docker logs command
+sudo docker ps
+sudo docker logs f7f38bd79216
 
 ## Logs from the container running the TechTrends application
 # TODO: paste logs from the Docker container 
+ * Serving Flask app 'app' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://172.17.0.2:3111/ (Press CTRL+C to quit)
+172.17.0.1 - - [28/Nov/2022 15:59:01] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [28/Nov/2022 15:59:01] "GET /static/css/main.css HTTP/1.1" 200 -
+172.17.0.1 - - [28/Nov/2022 15:59:02] "GET /favicon.ico HTTP/1.1" 404 -
+172.17.0.1 - - [28/Nov/2022 16:00:25] "GET /1 HTTP/1.1" 200 -
+172.17.0.1 - - [28/Nov/2022 16:00:25] "GET /static/css/main.css HTTP/1.1" 304 -
+172.17.0.1 - - [28/Nov/2022 16:01:48] "GET /2 HTTP/1.1" 200 -
+172.17.0.1 - - [28/Nov/2022 16:01:48] "GET /static/css/main.css HTTP/1.1" 304 -
+172.17.0.1 - - [28/Nov/2022 16:02:31] "GET /create HTTP/1.1" 200 -
+172.17.0.1 - - [28/Nov/2022 16:02:31] "GET /static/css/main.css HTTP/1.1" 304 -
+172.17.0.1 - - [28/Nov/2022 16:02:49] "POST /create HTTP/1.1" 302 -
+172.17.0.1 - - [28/Nov/2022 16:02:49] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [28/Nov/2022 16:02:49] "GET /static/css/main.css HTTP/1.1" 304 -
+172.17.0.1 - - [28/Nov/2022 16:03:00] "GET /create HTTP/1.1" 200 -
+172.17.0.1 - - [28/Nov/2022 16:03:00] "GET /static/css/main.css HTTP/1.1" 304 -
+172.17.0.1 - - [28/Nov/2022 16:03:37] "GET /7 HTTP/1.1" 200 -
+172.17.0.1 - - [28/Nov/2022 16:03:37] "GET /static/css/main.css HTTP/1.1" 304 -
+172.17.0.1 - - [28/Nov/2022 16:04:08] "GET /metrics HTTP/1.1" 200 
