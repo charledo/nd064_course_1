@@ -37,4 +37,5 @@ sudo docker logs f7f38bd79216
 172.17.0.1 - - [28/Nov/2022 16:03:00] "GET /static/css/main.css HTTP/1.1" 304 -
 172.17.0.1 - - [28/Nov/2022 16:03:37] "GET /7 HTTP/1.1" 200 -
 172.17.0.1 - - [28/Nov/2022 16:03:37] "GET /static/css/main.css HTTP/1.1" 304 -
-172.17.0.1 - - [28/Nov/2022 16:04:08] "GET /metrics HTTP/1.1" 200 
+172.17.0.1 - - [28/Nov/2022 16:04:08] "GET /metrics HTTP/1.1" 200 -
+
