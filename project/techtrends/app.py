@@ -3,6 +3,7 @@ import sqlite3
 from flask import Flask, jsonify, json, render_template, request, url_for, redirect, flash
 from werkzeug.exceptions import abort
 import logging
+import sys
 
 format_output = f'%(asctime)s %(levelname)s: %(message)s'
 logging.basicConfig(format=format_output, level=logging.DEBUG, handlers=[sys.stdout,sys.stderr])
