@@ -4,11 +4,15 @@ from flask import Flask, jsonify, json, render_template, request, url_for, redir
 from werkzeug.exceptions import abort
 import logging
 
+format_output = f'%(asctime)s %(levelname)s: %(message)s'
+logging.basicConfig(format=format_output, level=logging.DEBUG, handlers=[sys.stdout,sys.stderr])
+
 DB_CONNECTION_COUNT = 0
 def db_connection_release():
-    global DB_CONNECTION_COUNT
-    DB_CONNECTION_COUNT = DB_CONNECTION_COUNT - 1
-
+    #global DB_CONNECTION_COUNT
+    #DB_CONNECTION_COUNT = DB_CONNECTION_COUNT - 1
+    pass
+    
 # Function to get a database connection.
 # This function connects to database with the name `database.db`
 def get_db_connection():
