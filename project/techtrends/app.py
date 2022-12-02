@@ -5,8 +5,16 @@ from werkzeug.exceptions import abort
 import logging
 import sys
 
-format_output = f'%(asctime)s %(levelname)s: %(message)s'
-logging.basicConfig(format=format_output, level=logging.DEBUG, handlers=[sys.stdout,sys.stderr])
+logging_format = f'%(asctime)s %(levelname)s: %(message)s'
+log = logging.getLogger()
+stdout_handler = logging.StreamHandler(sys.stdout)
+stdout_handler.setLevel(logging.DEBUG)
+stdout_handler.setFormatter(logging.Formatter(logging_format))
+log.addHandler(stdout_handler)
+stderr_handler = logging.StreamHandler(sys.stderr)
+stderr_handler.setLevel(logging.DEBUG)
+stderr_handler.setFormatter(logging.Formatter(logging_format))
+log.addHandler(stderr_handler)
 
 DB_CONNECTION_COUNT = 0
 def db_connection_release():
