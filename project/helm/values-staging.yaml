@@ -3,6 +3,11 @@ namespace:
 
 replicaCount: 3
 
+image:
+  repository: charledo/techtrends
+  tag: latest
+  pullPolicy: IfNotPresent
+
 service:
   port: 5111
 
