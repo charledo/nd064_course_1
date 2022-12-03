@@ -12,7 +12,7 @@ replicaCount: 5
 image:
   repository: charledo/techtrends
   tag: latest
-  pullPolicy: IfNotPresent
+  pullPolicy: Always
 
 resources:
   requests:
