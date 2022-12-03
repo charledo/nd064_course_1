@@ -9,6 +9,11 @@ image:
 
 replicaCount: 5
 
+image:
+  repository: charledo/techtrends
+  tag: latest
+  pullPolicy: IfNotPresent
+
 resources:
   requests:
     memory: 128Mi
