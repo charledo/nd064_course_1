@@ -4,7 +4,8 @@ namespace:
 replicaCount: 3
 
 image:
-  repository: charledo/techtrends
+  dockerRegistry: charledo
+  repository: techtrends
   tag: latest
   pullPolicy: Always
 
