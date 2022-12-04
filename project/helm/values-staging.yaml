@@ -10,6 +10,9 @@ image:
 
 service:
   port: 5111
+  targetPort: 6111
+  protocol: TCP
+  type: ClusterIP
 
 resources:
   requests:
@@ -18,3 +21,13 @@ resources:
   limits:
     memory: 128Mi
     cpu: 500m
+
+containerPort: 6111
+
+livenessProbe:
+  path: /healthz
+  port: 6111
+
+readinessProbe:
+  path: /healthz
+  port: 6111
