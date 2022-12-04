@@ -24,7 +24,7 @@ spec:
         tag: latest
     spec:
       containers:
-      - image: {{ .Values.image.dockerRegistry }}/{{ .Values.image.repository }}:{{ .Values.image.tag }}
+        image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         name: {{ .Values.appname }}
         ports:
@@ -37,5 +37,4 @@ spec:
           httpGet:
             path: {{ .Values.livenessProbe.path }}
             port: {{ .Values.livenessProbe.port }}
-        resources:
-{{ toYaml .Values.resources | indent 12 }}
+        resources: {{ toYaml .Values.resources | indent 12 }}
