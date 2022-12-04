@@ -3,6 +3,9 @@ namespace:
 
 service:
   port: 7111
+  targetPort: 8111
+  protocol: TCP
+  type: ClusterIP
 
 replicaCount: 5
 
@@ -18,3 +21,13 @@ resources:
   limits:
     memory: 256Mi
     cpu: 500m
+
+containerPort: 8111
+
+livenessProbe:
+  path: /healthz
+  port: 8111
+
+readinessProbe:
+  path: /healthz
+  port: 8111
