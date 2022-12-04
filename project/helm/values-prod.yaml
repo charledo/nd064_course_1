@@ -7,10 +7,9 @@ service:
 replicaCount: 5
 
 image:
-  dockerRegistry: charledo
-  repository: techtrends
+  repository: charledo/techtrends
   tag: latest
-  pullPolicy: Always
+  pullPolicy: IfNotPresent
 
 resources:
   requests:
